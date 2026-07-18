@@ -8,7 +8,7 @@ The main visual signature is the accountability line: a thin connected path that
 
 ## Type
 
-Use the locally embedded ITC Avant Garde Gothic LT family. Extra Light carries body copy and Medium carries labels, controls, headings, and critical data. Body text is 1rem with a 1.45 line height. Operational UI uses 0.8125rem to 0.875rem. Page headings use a compact 1.0625rem to 1.25rem scale. Context labels use sentence case wherever possible. Numeric data uses tabular figures.
+Use the locally embedded ITC Avant Garde Gothic LT family. Medium carries the working interface so text remains clear on wide factory displays. Extra Light is reserved for the client document. Body text is 1rem with a 1.45 line height. Operational UI uses 0.875rem to 0.9375rem. Metadata never falls below 0.8125rem. Page headings use a compact 1.25rem to 1.375rem scale. Context labels use sentence case wherever possible. Numeric data uses tabular figures.
 
 ## Space and layout
 

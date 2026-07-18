@@ -1468,7 +1468,7 @@ const secondaryViewStyles = `
     border-radius: 0;
     background: var(--sv-ink);
     color: #ffffff;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 160ms ease-out, color 160ms ease-out;
@@ -1508,27 +1508,27 @@ const secondaryViewStyles = `
 
   .sv-summary-title-line h3 {
     margin: 0;
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     font-weight: 600;
     line-height: 1.25;
   }
 
   .sv-summary-exception p {
     margin: 6px 0 2px;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     line-height: 1.35;
   }
 
   .sv-summary-exception p strong {
     margin-right: 3px;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-variant-numeric: tabular-nums;
   }
 
   .sv-summary-exception > span {
     display: block;
     color: var(--sv-muted-ink);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     line-height: 1.35;
   }
 
@@ -1551,13 +1551,13 @@ const secondaryViewStyles = `
 
   .sv-summary-stats dt {
     color: var(--sv-subtle-ink);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     line-height: 1.3;
   }
 
   .sv-summary-stats dd {
     margin: 4px 0 0;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 600;
     line-height: 1.2;
     font-variant-numeric: tabular-nums;
@@ -1567,7 +1567,7 @@ const secondaryViewStyles = `
     display: block;
     margin-top: 4px;
     color: var(--sv-muted-ink);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     line-height: 1.4;
   }
 
@@ -1607,7 +1607,7 @@ const secondaryViewStyles = `
     background: transparent;
     color: var(--sv-ink);
     font: inherit;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
   }
 
   .sv-query input::placeholder {
@@ -1652,14 +1652,14 @@ const secondaryViewStyles = `
     background: transparent;
     color: var(--sv-ink);
     font: inherit;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     cursor: pointer;
   }
 
   .sv-result-count {
     margin-left: auto;
     color: var(--sv-subtle-ink);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     font-variant-numeric: tabular-nums;
   }
 
@@ -1669,7 +1669,7 @@ const secondaryViewStyles = `
     border: 0;
     background: transparent;
     color: var(--sv-ink);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     font-weight: 600;
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -1688,7 +1688,7 @@ const secondaryViewStyles = `
     border-collapse: collapse;
     table-layout: auto;
     color: #000000;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.35;
   }
@@ -1699,7 +1699,7 @@ const secondaryViewStyles = `
     border-bottom: 1px solid var(--sv-rule-strong);
     background: #ffffff;
     color: #000000;
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     font-weight: 600;
     text-align: left;
     white-space: nowrap;
@@ -1727,7 +1727,7 @@ const secondaryViewStyles = `
     border: 0;
     background: transparent;
     color: var(--sv-ink);
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 600;
     line-height: 1.35;
     text-align: left;
@@ -1753,7 +1753,7 @@ const secondaryViewStyles = `
     display: block;
     margin-top: 4px;
     color: var(--sv-muted-ink);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     font-weight: 500;
     line-height: 1.35;
   }
@@ -1779,7 +1779,7 @@ const secondaryViewStyles = `
     border-radius: 0;
     background: #ffffff;
     color: var(--sv-subtle-ink);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     font-weight: 600;
     line-height: 1.2;
     white-space: nowrap;
@@ -1934,12 +1934,12 @@ const secondaryViewStyles = `
     }
 
     .sv-summary-stats dt {
-      font-size: 0.75rem;
+      font-size: 0.8125rem;
     }
 
     .sv-summary-stats dd {
       margin-top: 4px;
-      font-size: 1rem;
+      font-size: 1.125rem;
     }
 
     .sv-summary-stats dd span {
@@ -2020,7 +2020,7 @@ const secondaryViewStyles = `
     .sv-table td::before {
       content: attr(data-label);
       color: var(--sv-subtle-ink);
-      font-size: 0.75rem;
+      font-size: 0.8125rem;
       font-weight: 600;
     }
 

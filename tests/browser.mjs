@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 import { chromium } from "playwright-core";
 import axeCore from "axe-core";
 
-const baseUrl = "http://127.0.0.1:3000";
+const baseUrl = process.env.BASE_URL ?? "http://127.0.0.1:3000";
+const isRemote = !baseUrl.startsWith("http://127.0.0.1") && !baseUrl.startsWith("http://localhost");
+const navigationWaitUntil = isRemote ? "domcontentloaded" : "networkidle";
 const browser = await chromium.launch({
   executablePath: "/usr/bin/google-chrome",
   headless: true,
@@ -17,7 +19,7 @@ page.on("console", (message) => {
 });
 
 async function waitForApp() {
-  await page.getByTestId("command-center").waitFor({ state: "visible", timeout: 5000 });
+  await page.getByTestId("command-center").waitFor({ state: "visible", timeout: isRemote ? 20000 : 5000 });
 }
 
 async function assertNoHorizontalOverflow(label) {
@@ -133,7 +135,7 @@ async function dismissToasts() {
 }
 
 try {
-  await page.goto(baseUrl, { waitUntil: "networkidle" });
+  await page.goto(baseUrl, { waitUntil: navigationWaitUntil });
   await waitForApp();
   assert.equal(await page.locator("h1").count(), 1, "Desktop should expose one page heading");
   assert.equal(await page.locator(".app-sidebar .nav-item").count(), 8, "Supervisor should see eight role-relevant modules");
@@ -204,7 +206,7 @@ try {
   const desktopAxeViolations = await runAxe("desktop quality");
 
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto(baseUrl, { waitUntil: "networkidle" });
+  await page.goto(baseUrl, { waitUntil: navigationWaitUntil });
   await waitForApp();
   await assertNoHorizontalOverflow("mobile command center");
   assert.equal(await page.locator(".mobile-bottom-nav").evaluate((element) => getComputedStyle(element).display), "flex");
@@ -224,7 +226,7 @@ try {
   const mobileAxeViolations = await runAxe("mobile work");
 
   await page.setViewportSize({ width: 1024, height: 768 });
-  await page.goto(baseUrl, { waitUntil: "networkidle" });
+  await page.goto(baseUrl, { waitUntil: navigationWaitUntil });
   await waitForApp();
   await assertNoHorizontalOverflow("tablet command center");
   await page.screenshot({ path: "artifacts/forgeos-command-tablet.png", fullPage: false });

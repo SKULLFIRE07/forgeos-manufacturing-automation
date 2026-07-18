@@ -9,22 +9,22 @@ const forgeAvant = localFont({
     {
       path: "./fonts/avant-garde-extra-light.ttf",
       style: "normal",
-      weight: "400",
+      weight: "300",
     },
     {
       path: "./fonts/avant-garde-extra-light-oblique.ttf",
       style: "italic",
-      weight: "400",
+      weight: "300",
     },
     {
       path: "./fonts/avant-garde-medium.ttf",
       style: "normal",
-      weight: "600",
+      weight: "500",
     },
     {
       path: "./fonts/avant-garde-medium-oblique.ttf",
       style: "italic",
-      weight: "600",
+      weight: "500",
     },
   ],
   variable: "--font-forge-avant",
